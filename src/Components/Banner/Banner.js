@@ -1,10 +1,10 @@
-import * as bannerStyles from './Banner.module.css';
+
 
 const Banner = () => {
     return (
-        <div>
-            <h1 className={bannerStyles.title}>CONTIGO AVIATION</h1>
-            <p className={bannerStyles.subtitle}>airplane rental</p>
+        <div className="mb-28">
+            <h1 className="text-7xl text-center">CONTIGO AVIATION</h1>
+            <p className="text-center m-5">airplane rental</p>
         </div>
     )
 }
