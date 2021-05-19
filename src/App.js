@@ -1,3 +1,4 @@
+import { useState} from 'react';
 import './App.css';
 import Schedule from './Components/Schedule/Schedule';
 import Navbar from './Components/Navbar/Navbar';
@@ -7,19 +8,22 @@ import ImgCarousel from './Components/ImgCarousel/ImgCarousel';
 import ReviewCarousel from './Components/ReviewCarousel/ReviewCarousel';
 import Info from './Components/Info/Info';
 import Statement from './Components/Statement/Statement';
+import Login from './Components/Login/Login';
+import Signup from './Components/Signup/Signup';
 
 
 
 
 function App() {
 
+  const [loggedIn, setLoggedIn] = useState(false);
 
 
   return (
     <div className="App">
-      <Route path="/" exact>
-        <Banner />
-        <Navbar />
+      <Banner />
+      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+      <Route path="/" exact>  
         <ImgCarousel />
         <Info />
         <Statement />
@@ -27,9 +31,13 @@ function App() {
       </Route>
       {/* <Route path="/schedule" component={Schedule} /> */}
       <Route path="/schedule">
-        <Banner />
-        <Navbar />
-        <Schedule />
+        <Schedule loggedIn={loggedIn}/>
+      </Route>
+      <Route path="/LogIn">
+        <Login setLoggedIn={setLoggedIn}/>
+      </Route>
+      <Route path="/signup">
+        <Signup setLoggedIn={setLoggedIn}/>
       </Route>
     </div>
   );
