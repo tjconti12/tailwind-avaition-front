@@ -43,7 +43,7 @@ const Schedule = ({ loggedIn }) => {
 
     const getEvents = async () => {
         try {
-            const response = await fetch('http://localhost:8080/Events')
+            const response = await fetch('https://tailwind-backend.herokuapp.com/Events')
             const data = await response.json();
             setItems(data)
         } catch (error) {
@@ -75,7 +75,7 @@ const Schedule = ({ loggedIn }) => {
 
     const checkIfCanBeDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/Events/${id}`)
+            const response = await fetch(`https://tailwind-backend.herokuapp.com/Events/${id}`)
             const data = await response.json();
             console.log(data[0].username)
             if(data[0].username === window.localStorage.getItem('username')) {

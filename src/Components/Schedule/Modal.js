@@ -49,7 +49,7 @@ const Modal = ({ handleClose, items, setItems, getEvents }) => {
     const addEvent = async (startTime, endTime) => {
         let previousId = items.length === 0 ? 0 : items[items.length - 1].id;
         try {
-            const response = await fetch('http://localhost:8080/Events', {
+            const response = await fetch('https://tailwind-backend.herokuapp.com/Events', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -70,28 +70,6 @@ const Modal = ({ handleClose, items, setItems, getEvents }) => {
         } catch (error) {
             console.error(error)
         }
-        // let groupNum = null;
-        // if(event.plane === 'N373AF') groupNum = 1
-        // else if (event.plane === 'N3285R') groupNum = 2
-        // else if (event.plane === 'N116EP') groupNum = 3
-        // else if (event.plane === 'N172L') groupNum = 4
-        // else if (event.plane === 'N325YZ') groupNum = 5
-            
-        // let newItems = items;
-        // let lastId = items[items.length - 1].id;
-        // newItems.push({
-        //     //group, title, start, end
-        //     id: lastId + 1,
-        //     group: groupNum,
-        //     title: "NEW",
-        //     start_time: time.unix() * 1000,
-        //     end_time: ((time.unix()) + (parseFloat(event.block) * 3600)) * 1000
-        //     // Had to multiple by 1000 because moment returns the unix in seconds, but the scheduler takes the time in milliseconds
-        // })
-        // setItems(newItems)
-        // handleClose()
-        // console.log(items)
-        // console.log(time.unix())
     }
     
     

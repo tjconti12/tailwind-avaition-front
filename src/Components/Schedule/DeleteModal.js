@@ -4,7 +4,7 @@ const DeleteModal = ({setShowDelete, idToDelete, getEvents}) => {
 
     const handleDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/Events/${idToDelete}`, {
+            const response = await fetch(`https://tailwind-backend.herokuapp.com/Events/${idToDelete}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

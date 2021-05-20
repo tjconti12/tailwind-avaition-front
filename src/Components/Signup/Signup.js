@@ -14,7 +14,7 @@ const Signup = ({ setLoggedIn }) => {
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/account/register', {
+            const response = await fetch('https://tailwind-backend.herokuapp.com/account/register', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
