@@ -1,0 +1,63 @@
+[
+    {
+        "tail": "N116EP",
+        "type": "C152",
+        "equipment": "Dual Radios, VFR Only",
+        "cost": "100",
+        "airport": "KORL",
+        "photos": [
+            "/images/N116EP/N116EP-Outside.png", 
+            "/images/N116EP/N116EP-Cockpit.png", 
+            "/images/N116EP/N116EP-Right.png"
+        ]
+    },
+    {
+        "tail": "N172L",
+        "type": "SR22",
+        "equipment": "Cirrus Perspective by Garmin, Autopilot, Air conditioning",
+        "cost": "350",
+        "airport": "KORL",
+        "photos": [
+            "/images/N172L/N172L-Outside.png",
+            "/images/N325YZ/N325YZ-Cockpit (1).png",
+            "/images/N172L/N172L-Front.png"
+        ]
+    },
+    {
+        "tail": "N325YZ",
+        "type": "DA40",
+        "equipment": "Garmin G1000, Autopilot, Air conditioning",
+        "cost": "210",
+        "airport": "KSFB",
+        "photos": [
+            "/images/N325YZ/N325YZ-Outside.png",
+            "/images/N325YZ/N325YZ-Cockpit(1).png",
+            "/images/N325YZ/N325YZ-Interior.png",
+            "/images/N325YZ/N325YZ-Left.png"
+        ]
+    },
+    {
+        "tail": "N373AF",
+        "type": "C172SP",
+        "equipment": "Garmin G1000, Autopilot",
+        "cost": "180",
+        "airport": "KSPG",
+        "photos": [
+            "/images/N373AF/N373AF-Outside.png",
+            "/images/N373AF/N373AF-Cockpit.png",
+            "/images/N373AF/N373AF-Interior.png",
+            "/images/N373AF/N373AF-Left.png"
+        ]
+    },
+    {
+        "tail": "N3285R",
+        "type": "C172R",
+        "equipment": "Garmin 530, Garmin 430, Autopilot",
+        "cost": "140",
+        "airport": "KVDF",
+        "photos": [
+            "/images/N3285R/N3285R-Outside.png",
+            "/images/N3285R/N3285R-Cockpit.png"
+        ]
+    }
+]

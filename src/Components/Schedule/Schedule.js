@@ -4,6 +4,7 @@ import 'react-calendar-timeline/lib/Timeline.css';
 import moment from 'moment';
 import Modal from './Modal';
 import FullCalendar from './FullCalendar';
+import DeleteModal from './DeleteModal';
 
 const groups = [{ id: 1, title: "N373AF" }, { id: 2, title: "N3285R" }, { id: 3, title: "N116EP" }, { id: 4, title: "N172L" }, { id: 5, title: "N325YZ" }]
 
@@ -34,6 +35,8 @@ const Schedule = ({ loggedIn }) => {
 
     const [items, setItems] = useState([]);
     const [showAddEvent, setShowAddEvent] = useState(false)
+    const [showDelete, setShowDelete] = useState(false)
+    const [idToDelete, setIdToDelete] = useState(null)
     const [dateToView, setDateToView] = useState(null)
     const [showCalendar, setShowCalendar] = useState(true)
     const [showTimeline, setShowTimeline] = useState(false)
@@ -70,6 +73,20 @@ const Schedule = ({ loggedIn }) => {
         handleShow(showCalendar, setShowCalendar)
     }
 
+    const checkIfCanBeDelete = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:8080/Events/${id}`)
+            const data = await response.json();
+            console.log(data[0].username)
+            if(data[0].username === window.localStorage.getItem('username')) {
+                setIdToDelete(id)
+                setShowDelete(true)
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     useEffect(() => {
         getEvents()
     }, [])
@@ -97,9 +114,13 @@ const Schedule = ({ loggedIn }) => {
                     // visibleTimeStart={dateToView}
                     sidebarWidth={100}
                     onCanvasClick={(groupId, time, e) => console.log(groupId, time), handleAdd}
+                    onItemClick={(itemId, e, time) => checkIfCanBeDelete(itemId)}
                 />
             </div> : <></>}
-            
+            {showDelete ?
+            <DeleteModal setShowDelete={setShowDelete} idToDelete={idToDelete} getEvents={getEvents}/> :
+            <></>
+            }
         </div>
     )
 }

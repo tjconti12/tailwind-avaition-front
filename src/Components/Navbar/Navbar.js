@@ -14,8 +14,8 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
         <nav className="w-screen flex justify-between w-screen">
             <ul className="flex ml-5">
                 <li className="m-5"><Link to="/">Home</Link></li>
-                <li className="m-5">About</li>
-                <li className="m-5">Locations</li>
+                <li className="m-5"><Link to="/Planes">Planes</Link></li>
+                <li className="m-5"><Link to="/locations">Locations</Link></li>
                 <li className="m-5"><Link to="/schedule" >Schedule</Link></li>
                 <li className="m-5">Reviews</li>
                 <li className="m-5">Contact Us</li>

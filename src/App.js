@@ -10,6 +10,9 @@ import Info from './Components/Info/Info';
 import Statement from './Components/Statement/Statement';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
+import Locations from './Components/Locations/Locations';
+import Planes from './Components/Planes/Planes';
+import PlaneDetail from './Components/Planes/PlaneDetail';
 
 
 
@@ -39,6 +42,16 @@ function App() {
       <Route path="/signup">
         <Signup setLoggedIn={setLoggedIn}/>
       </Route>
+      <Route path="/locations">
+        <Locations />
+      </Route>
+      <Route path="/Planes" exact>
+        <Planes />
+      </Route>
+      <Route path="/Planes/:Tail">
+        <PlaneDetail />
+      </Route>
+      
     </div>
   );
 }

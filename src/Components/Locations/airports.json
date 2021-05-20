@@ -1,0 +1,64 @@
+[
+    {
+        "code": "KORL",
+        "name": "Orlando Executive",
+        "planes": [
+            {
+                "tail": "N172L",
+                "type": "SR22",
+                "equipment": "Cirrus Perspective by Garmin, Autopilot, Air conditioning",
+                "cost": "350"
+            }, 
+            {
+                "tail": "N116EP",
+                "type": "C152",
+                "equipment": "Dual Radios, VFR Only",
+                "cost": "100"
+            }
+        ],
+        "address": "400 Herdon Ave, Orlando, FL",
+        "photo": "/images/KORL.png"
+    },
+    {
+        "code": "KSFB",
+        "name": "Orlando-Sanford International",
+        "planes": [
+            {
+                "tail": "N325YZ",
+                "type": "DA40",
+                "equipment": "Garmin G1000, Autopilot, Air conditioning",
+                "cost": "210"
+            }
+        ],
+        "address": "2841 Flightline Ave Sanford, FL 32773",
+        "photo": "/images/KSFB.png"
+    },
+    {
+        "code": "KVDF",
+        "name": "Tampa Executive",
+        "planes": [
+            {
+                "tail": "N3285R",
+                "type": "C172R",
+                "equipment": "Garmin 530, Garmin 430, Autopilot",
+                "cost": "140"
+            }
+        ],
+        "address": "6530 Tampa Executive Airport Rd, Tampa, FL 33610",
+        "photo": "/images/KVDF.png"
+    },
+    {
+        "code": "KSPG",
+        "name": "Albert Whitted",
+        "planes": [
+            {
+                "tail": "N373AF",
+                "type": "C172SP",
+                "equipment": "Garmin G1000, Autopilot",
+                "cost": "180"
+            }
+        ],
+        "address": "107 8th Ave SE, St. Petersburg, FL 33701",
+        "photo": "/images/KSPG.png"
+    }
+]

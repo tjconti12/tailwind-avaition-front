@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import cirrus from '../../Images/N172L/N172L-Outside.png';
 
 const Info = () => {
@@ -19,7 +20,7 @@ const Info = () => {
                     <li className="text-2xl my-2">We allow and support trips to the Bahamas</li>
                     <li className="text-2xl my-2">Convenient online scheduling, payment and account management</li>
                 </ul>
-                <button className="bg-black text-white w-full text-3xl py-1 mt-16">BOOK NOW</button>
+                <Link to="/schedule"><button className="bg-black text-white w-full text-3xl py-1 mt-16">BOOK NOW</button></Link>
             </div>
         </div>
         </div>
