@@ -12,6 +12,9 @@ module.exports = {
       zIndex: {
         1000: '1000'
       },
+      margin: (theme, { negative }) => ({
+        'test': "0 0 0 5%"
+      }),
     },
   },
   variants: {

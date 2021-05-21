@@ -11,7 +11,7 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
     }
 
     return (
-        <nav className="flex justify-between w-screen">
+        <nav className="flex justify-between w-screen text-3xl">
             <ul className="flex ml-5">
                 <li className="m-5"><Link to="/">Home</Link></li>
                 <li className="m-5"><Link to="/Planes">Planes</Link></li>

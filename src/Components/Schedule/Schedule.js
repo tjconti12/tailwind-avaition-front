@@ -9,23 +9,23 @@ import DeleteModal from './DeleteModal';
 const groups = [{ id: 1, title: "N373AF" }, { id: 2, title: "N3285R" }, { id: 3, title: "N116EP" }, { id: 4, title: "N172L" }, { id: 5, title: "N325YZ" }]
 
 
-
-const itemsTest = [
+// Kept this here so the data structure of the events can be easily determined
+// const itemsTest = [
    
-    {
-        id: 1,
-        group: 3,
-        title: 'Unix',
-        start_time: 1621058340 * 1000,
-        end_time: 1621079940 * 1000
-    },
-    {
-        group: 1,
-        title: "john",
-        start_time: 1621346400000,
-        end_time: 1621357200000,
-    }
-]
+//     {
+//         id: 1,
+//         group: 3,
+//         title: 'Unix',
+//         start_time: 1621058340 * 1000,
+//         end_time: 1621079940 * 1000
+//     },
+//     {
+//         group: 1,
+//         title: "john",
+//         start_time: 1621346400000,
+//         end_time: 1621357200000,
+//     }
+// ]
 
 
  
@@ -93,19 +93,24 @@ const Schedule = ({ loggedIn }) => {
 
     return (
         <div className="h-screen w-screen">
-            {showCalendar ? <FullCalendar setDateToView={setDateToView} handleDayClick={handleDayClick}/> : <button onClick={() => {
-                handleShow(showTimeline, setShowTimeline)
-                handleShow(showCalendar, setShowCalendar)
-            }}>Back</button>}
+            {showCalendar ? <FullCalendar setDateToView={setDateToView} handleDayClick={handleDayClick}/> : 
+            <div className="my-6">
+                <button className="text-2xl bg-gray-500 text-white px-2 rounded-2xl mr-6" onClick={() => {
+                    handleShow(showTimeline, setShowTimeline)
+                    handleShow(showCalendar, setShowCalendar)
+                }}>BACK</button>
+                {loggedIn ? 
+                        <button className="text-2xl bg-blue-500 text-white px-2 rounded-2xl" onClick={handleAdd}>ADD</button>
+                        :
+                        <></>
+                    }
+            </div>
+            }
             
             {showAddEvent ? <Modal handleClose={handleClose} items={items} setItems={setItems} getEvents={getEvents}/> : <></>}
             {showTimeline ? 
             <div>
-                {loggedIn ? 
-                    <button onClick={handleAdd}>ADD</button>
-                    :
-                    <></>
-                }
+                
                 <Timeline
                     groups={groups}
                     items={items}

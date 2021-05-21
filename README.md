@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Tailwind Aviation
+![Home Page](./src/Images/screenshots/homepage.png)
+Rent a plane for an hour, two hours, or even the whole day! Tailwind aviation is a mock airplane rental company. Make an account, login, and travel to a new destination!
+Live link here https://tailwind-aviation.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Motivation
+With my background in aviation, I have rented aircraft from multiple different places. I was inspired by a particular website, that lacked modern styling and features. There had to be a better way to set up scheduling.
 
-## Available Scripts
+## Build Status
+Currently, anyone can quickly see availability in real time. Once a user registers, they are able to reserve a spot if available. The website is only missing the ability to handle billing and payments, which will not be added since this is a mock up site. 
 
-In the project directory, you can run:
+## Tech/framework used
+React, javascript, tailwind Css
+Dependencies: 
+Material-ui
+Material-ui/pickers
+moment js
+react-calendar
+react-calendar-timeline
+react-responsive-carousel
+craco
+tailwindcss
 
-### `yarn start`
+## Features
+The site contains user authentication. New Users can register for an account, or returning users can log into their account. Once logged in, the add to calendar button becomes visible. The user can now go in and add to the schedule.   
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Calendar](./src/Images/screenshots/calendar.png)     
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Scheduler](./src/Images/screenshots/scheduler.png)    
 
-### `yarn test`
+![Add Event](./src/Images/screenshots/addEvent.png)       
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+If the schedule is already full, the front end provides a validation check. The user will be alerted that the selected time is already booked.   
+There is a locations page with information about each airport. The AVWX api provides current aviation weather for each airport. This makes it easier for pilots to get a general idea about the current weather picture. The dot next to the Airport name will change color according to the aviation flight conditions.  
+1. Green - VFR (Visual Flight Rules)
+2. Blue - MVFR (Marginal Visual Flight Rules)
+3. Red - IFR (Instrument Flight Rules)
+4. Purple - LIFR (Low Instrument Flight Rules)    
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+More on this here https://www.thinkaviation.net/levels-of-vfr-ifr-explained/ if interested.   
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Airport Page](./src/Images/screenshots/location.png)    
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+On the plane info page, it contains the 5 mock aircraft used in this build. Each image is a link to a detailed page for each aircraft. Each detailed page contains multiple photos and info about the aircraft (Tail number, Type, Equipment, Cost per Hour)
 
-### `yarn eject`
+![Plane Page](./src/Images/screenshots/location.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
+Fork and clone this repository. Run yarn add to install dependencies. All image files are included in the repository.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
+&copy; tjconti12
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
