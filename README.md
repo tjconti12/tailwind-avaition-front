@@ -10,16 +10,17 @@ With my background in aviation, I have rented aircraft from multiple different p
 Currently, anyone can quickly see availability in real time. Once a user registers, they are able to reserve a spot if available. The website is only missing the ability to handle billing and payments, which will not be added since this is a mock up site. 
 
 ## Tech/framework used
-React, javascript, tailwind Css
-Dependencies: 
-Material-ui
-Material-ui/pickers
-moment js
-react-calendar
-react-calendar-timeline
-react-responsive-carousel
-craco
-tailwindcss
+1. React
+2. Javascript
+3. tailwind Css
+4. Material-ui
+5. Material-ui/pickers
+6. moment js
+7. react-calendar
+8. react-calendar-timeline
+9. react-responsive-carousel
+10. craco
+11. tailwindcss
 
 ## Features
 The site contains user authentication. New Users can register for an account, or returning users can log into their account. Once logged in, the add to calendar button becomes visible. The user can now go in and add to the schedule.   
